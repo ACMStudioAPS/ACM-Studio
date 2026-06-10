@@ -1,45 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ACM Studio APS</title>
-<style>
-body{font-family:Arial,sans-serif;background:#111;color:#fff;max-width:900px;margin:auto;padding:40px;line-height:1.6}
-h1,h2{color:#fff}
-a{color:#d4af37;text-decoration:none}
-.card{background:#1b1b1b;padding:24px;border-radius:12px;margin:20px 0}
-.footer{margin-top:40px;font-size:14px;color:#bbb}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ACM Studio APS</title>
+  <meta name="description" content="ACM Studio APS è un'associazione culturale con sede a Vibo Valentia.">
+  <style>
+:root{
+  --bg:#070707;
+  --panel:#111111;
+  --text:#f5f2eb;
+  --muted:#b6b0a6;
+  --line:#2b2b2b;
+  --accent:#d71920;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:1.55;
+}
+a{color:var(--text);text-decoration:none}
+a:hover{color:var(--accent)}
+.wrap{
+  width:min(1120px, calc(100% - 40px));
+  margin:0 auto;
+}
+header{
+  padding:28px 0;
+  border-bottom:1px solid var(--line);
+}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+.logo{
+  font-weight:800;
+  letter-spacing:-.04em;
+  font-size:22px;
+}
+.navlinks{
+  display:flex;
+  gap:22px;
+  font-size:14px;
+  color:var(--muted);
+}
+.hero{
+  padding:92px 0 84px;
+}
+.kicker{
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:22px;
+}
+h1{
+  font-size:clamp(54px, 9vw, 118px);
+  line-height:.88;
+  letter-spacing:-.075em;
+  margin:0 0 28px;
+  max-width:1000px;
+}
+.lead{
+  font-size:clamp(21px, 3vw, 34px);
+  line-height:1.2;
+  max-width:820px;
+  color:var(--text);
+  margin:0;
+}
+section{
+  padding:54px 0;
+  border-top:1px solid var(--line);
+}
+.section-title{
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--muted);
+  margin:0 0 24px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:18px;
+}
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:26px;
+  min-height:190px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.card h3{
+  margin:0 0 12px;
+  font-size:28px;
+  letter-spacing:-.04em;
+}
+.card p{
+  color:var(--muted);
+  margin:0 0 22px;
+}
+.btn{
+  display:inline-block;
+  width:max-content;
+  border-bottom:1px solid var(--accent);
+  padding-bottom:3px;
+}
+.two{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:46px;
+}
+p{margin:0 0 14px}
+.muted{color:var(--muted)}
+.info{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:26px;
+}
+.info p{margin-bottom:12px}
+footer{
+  border-top:1px solid var(--line);
+  padding:34px 0;
+  color:var(--muted);
+  font-size:14px;
+}
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+@media(max-width:820px){
+  .navlinks{display:none}
+  .hero{padding:66px 0 60px}
+  .grid,.two{grid-template-columns:1fr}
+  .card{min-height:auto}
+}
 </style>
 </head>
 <body>
-<h1>ACM Studio APS</h1>
-<p><strong>Cultura, musica, territorio.</strong></p>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="logo" href="index.html">ACM Studio APS</a>
+        <div class="navlinks">
+          <a href="#chi-siamo">Chi siamo</a>
+          <a href="#progetti">Progetti</a>
+          <a href="#contatti">Contatti</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<div class="card">
-<h2>Chi siamo</h2>
-<p>ACM Studio APS è un'associazione di promozione sociale che sviluppa progetti culturali, musicali e creativi nel territorio calabrese.</p>
-</div>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="kicker">Associazione culturale / Vibo Valentia</div>
+        <h1>Cultura, musica, territorio.</h1>
+        <p class="lead">
+          ACM Studio APS promuove attività culturali, artistiche e musicali attraverso eventi,
+          iniziative e progetti dedicati alla comunità.
+        </p>
+      </div>
+    </section>
 
-<div class="card">
-<h2>Progetti</h2>
-<ul>
-<li><a href="https://www.instagram.com/megan.events/" target="_blank">Megan Events</a></li>
-<li><a href="https://www.instagram.com/marranosfest/" target="_blank">Marranos</a></li>
-<li><a href="https://www.instagram.com/themadcat.music.event/" target="_blank">The Mad Cat</a></li>
-</ul>
-</div>
+    <section id="chi-siamo">
+      <div class="wrap two">
+        <div>
+          <h2 class="section-title">Chi siamo</h2>
+          <p>
+            ACM Studio APS è un'Associazione di Promozione Sociale con sede a Vibo Valentia.
+          </p>
+          <p class="muted">
+            L'associazione nasce per creare occasioni di incontro, partecipazione e aggregazione
+            attraverso linguaggi contemporanei, musica, cultura e progettualità territoriali.
+          </p>
+        </div>
+        <div class="info">
+          <p><strong>Sede legale</strong></p>
+          <p>Via Minerva 14<br>89900 Vibo Valentia (VV)<br>Italia</p>
+          <p><strong>Codice Fiscale</strong><br>96058490796</p>
+          <p><strong>Partita IVA</strong><br>04068560798</p>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h2>Contatti</h2>
-<p>Email: <a href="mailto:info@acm-studio.it">info@acm-studio.it</a></p>
-<p>Via Minerva 14, 89900 Vibo Valentia (VV)</p>
-<p>CF: 96058490796</p>
-<p>P. IVA: 04068560798</p>
-</div>
+    <section id="progetti">
+      <div class="wrap">
+        <h2 class="section-title">Progetti</h2>
+        <div class="grid">
+          <div class="card">
+            <div>
+              <h3>Megan Events</h3>
+              <p>Comunicazione, inviti e community per eventi selezionati.</p>
+            </div>
+            <a class="btn" href="https://www.instagram.com/megan.events/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+          <div class="card">
+            <div>
+              <h3>Marranos</h3>
+              <p>Format ed eventi musicali legati al territorio.</p>
+            </div>
+            <a class="btn" href="https://www.instagram.com/marranosfest/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+          <div class="card">
+            <div>
+              <h3>The Mad Cat</h3>
+              <p>Progetto musicale e culturale indipendente.</p>
+            </div>
+            <a class="btn" href="https://www.instagram.com/themadcat.music.event/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="footer">
-<a href="privacy.html">Privacy Policy</a>
-</div>
+    <section id="contatti">
+      <div class="wrap two">
+        <div>
+          <h2 class="section-title">Contatti</h2>
+          <p>Per informazioni sulle attività dell'associazione:</p>
+          <p><a class="btn" href="mailto:info@acm-studio.it">info@acm-studio.it</a></p>
+        </div>
+        <div>
+          <h2 class="section-title">Privacy</h2>
+          <p class="muted">
+            Le informazioni sul trattamento dei dati personali sono disponibili nella nostra informativa.
+          </p>
+          <p><a class="btn" href="privacy.html">Leggi la Privacy Policy</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© ACM Studio APS — Vibo Valentia, Italy</span>
+      <span><a href="privacy.html">Privacy Policy</a></span>
+    </div>
+  </footer>
 </body>
 </html>
